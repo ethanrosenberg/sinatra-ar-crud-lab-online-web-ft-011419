@@ -1,7 +1,8 @@
 <h1>Edit Article</h1>
 <form method="POST" action="/articles">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
   <p>Title: <input type="text" id="title" name="title"></p>
   <p>Content: <input type="text" id="content" name="content"></p>
-  <input id="hidden" type="hidden" name="_method" value="PATCH">
+
   <input type="submit" value="submit">
 </form>
