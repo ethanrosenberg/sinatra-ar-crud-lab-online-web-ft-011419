@@ -32,6 +32,10 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
+  patch '/articles/:id' do
+
+  end
+
   post '/articles' do
     article = Article.create(title: params[:title], content: params[:content])
     article.save
