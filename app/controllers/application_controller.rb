@@ -33,5 +33,6 @@ class ApplicationController < Sinatra::Base
     article.name = params[:name]
     article.content = params[:content]
     article.save
+    erb :index
   end
 end
