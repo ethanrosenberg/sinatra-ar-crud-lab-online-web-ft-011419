@@ -22,6 +22,11 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
+  get '/articles/:id' do
+    @article = Article.find_by(id: params[:id])
+
+  end
+
   post '/articles' do
     article = Article.new
     article.name = params[:name]
