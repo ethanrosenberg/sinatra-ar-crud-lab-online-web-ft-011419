@@ -17,6 +17,11 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
+  get '/articles' do
+    @articles = Article.all
+    erb :index
+  end
+
   post '/articles' do
     article = Article.new
     article.name = params[:name]
