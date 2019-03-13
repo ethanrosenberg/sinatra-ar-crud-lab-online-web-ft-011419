@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    erb :index
+    redirect to "/articles"
   end
 
   get '/articles/new' do
